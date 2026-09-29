@@ -1,11 +1,19 @@
 # Togather
 
-An interactive, responsive Delhi-NCR community-events discovery prototype. It uses a compatibility onboarding flow, local event filters, RSVP feedback, post-event connections, and an organiser publishing flow.
+A responsive static prototype for discovering small, interest-led local gatherings.
 
-## Run locally
+## Project structure
 
-Open `index.html` in a browser, or serve the folder with any static web server.
+- `index.html` — semantic page shell only
+- `styles.css` — all visual styles and responsive layouts
+- `app.js` — UI state, routing and event listeners
 
-## Deploy
+There are no embedded scripts, inline click handlers, build tools, or dependencies. Open `index.html` directly for a quick preview, or serve the folder with any static server.
 
-The project has no build step and can be deployed directly as a static site to Vercel.
+## Features
+
+- Interactive onboarding quiz
+- Event filtering and event detail views
+- Join state that carries into “My events”
+- Host-event form feedback
+- Responsive desktop and mobile navigation
