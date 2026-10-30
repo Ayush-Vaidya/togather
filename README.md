@@ -4,7 +4,7 @@ A people-first compatibility prototype for small gatherings in Delhi-NCR.
 
 ## Run
 
-Open `index.html` in a browser with all five source files together, or serve the folder with any static HTTP server. No install, build step, API key or login is needed. Event photos and the Manrope web font need internet access; system fonts and solid image backgrounds are available as fallbacks.
+Open `index.html` in a browser with all accompanying JS, CSS and logo files together, or serve the folder with any static HTTP server. No install, build step, API key or login is needed. Event photos and web fonts need internet access; system fonts and solid image backgrounds are available as fallbacks.
 
 ## Implemented
 
@@ -18,10 +18,15 @@ Open `index.html` in a browser with all five source files together, or serve the
 - Local host listing creation with honest no-attendee fallback scoring.
 - Match lab with eight sample profiles and downloadable recommendations for all 10,368 answer combinations.
 - Delete local demo data from Profile.
+- Social profiles with editable name/bio, event-experience posts, likes, past-event journals and upcoming RSVPs.
+- Click attendee avatars to browse fictional member profiles and event history.
+- Friend requests, explicit simulated acceptance, local chat and clearly labelled sample replies.
+- Friends-only upcoming sample plans, block/unblock and owner visibility preferences.
+- Freemium plan comparison with every social feature unlocked in this preview. No checkout or payments.
 
 ## Files
 
-`index.html` is the entry point. `styles.css` contains responsive styles. `data.js` contains the catalogue and synthetic people. `matching.js` is the independently testable scoring engine. `app.js` handles the interface and local storage.
+`index.html` is the entry point. `styles.css` and `social.css` contain responsive styles. `data.js` contains the catalogue and synthetic people. `matching.js` is the independently testable scoring engine. `social.js` implements local social state and views. `app.js` connects navigation and matching with the social interface. `logo.svg` contains the multicolour identity.
 
 ## Recommendation model
 
@@ -33,7 +38,7 @@ These are transparent prototype rules for an AI + psychometric product concept. 
 
 ## Verify and export
 
-Use Node's built-in runner: `node --test tests/matching.test.cjs`.
+Use Node's built-in runner: `node --test tests/matching.test.cjs tests/social.test.cjs`.
 
 Export the exhaustive list and eight worked examples: `node scripts/export-combinations.cjs <output-folder>`.
 
@@ -42,3 +47,5 @@ Demo: create a profile, explore a top match, inspect people fit, RSVP, open My p
 ## Production next step
 
 Real accounts, consented attendance data, event verification, payments, moderation and a validated learned ranking model require backend services. Do not put real attendee data or API keys in these public static files.
+
+Social messages, posts, requests and privacy preferences are device-local simulations, not multiuser backend features. Sample upcoming plans appear only after an explicitly simulated mutual connection. The owner's visibility preference is saved but cannot enforce privacy across real accounts without a backend. Premium pricing and interaction limits remain proposals. Consent, blocking and safety must never require payment.
